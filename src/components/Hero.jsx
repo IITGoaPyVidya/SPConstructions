@@ -41,7 +41,7 @@ export default function Hero() {
         direction: 'top',
         random: true,
         straight: false,
-        outModes: 'out',
+        outModes: { default: 'out' },
       },
     },
     detectRetina: true,
