@@ -45,6 +45,21 @@ function App() {
     return () => lenis.destroy();
   }, [loading]);
 
+  // Handle initial hash navigation on page load
+  useEffect(() => {
+    if (loading) return;
+    
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [loading]);
+
   return (
     <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
       <AnimatePresence>

@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-concrete/50 text-sm leading-relaxed mb-4">
-              Goa's premier construction company building extraordinary spaces since 2009.
+              Leading construction company with 15+ projects delivered across India since 2009.
             </p>
             <div className="flex gap-3">
               {['𝕏', '📘', '📸', '💼'].map((icon, i) => (

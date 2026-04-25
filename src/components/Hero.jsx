@@ -101,7 +101,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
           >
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-            <span className="text-orange-400 text-sm font-medium">Goa's Premier Construction Company</span>
+            <span className="text-orange-400 text-sm font-medium">15+ Projects Delivered Across India</span>
           </motion.div>
 
           {/* Heading */}
