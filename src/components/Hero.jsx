@@ -131,8 +131,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            15+ years of excellence in residential, commercial, and hospitality construction across India. 
-            50+ projects delivered with precision and pride.
+            15+ years of expertise in fiber optic installations and mining infrastructure across India. 
+            50+ telecom and mining projects delivered with precision and pride.
           </motion.p>
 
           {/* Stats row */}

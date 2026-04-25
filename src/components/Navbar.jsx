@@ -53,7 +53,7 @@ export default function Navbar({ theme, toggleTheme }) {
             <span className="text-white font-bold text-lg leading-none block font-heading">
               SP <span className="text-orange-500">Construction</span>
             </span>
-            <span className="text-concrete/50 text-xs">Building Excellence</span>
+            <span className="text-concrete/50 text-xs">Infrastructure Specialists</span>
           </div>
         </motion.a>
 

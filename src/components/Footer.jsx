@@ -21,11 +21,11 @@ export default function Footer() {
                 <div className="text-white font-bold text-lg font-heading leading-none">
                   SP <span className="text-orange-500">Construction</span>
                 </div>
-                <div className="text-concrete/40 text-xs">Building Excellence</div>
+                <div className="text-concrete/40 text-xs">Telecom & Mining Infrastructure</div>
               </div>
             </div>
             <p className="text-concrete/50 text-sm leading-relaxed mb-4">
-              Leading construction company with 15+ projects delivered across India since 2009.
+              Specialized in fiber optic installations and mining infrastructure with 50+ projects across India since 2009.
             </p>
             <div className="flex gap-3">
               {['𝕏', '📘', '📸', '💼'].map((icon, i) => (

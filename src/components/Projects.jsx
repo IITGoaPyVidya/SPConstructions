@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../utils/data';
 
-const categories = ['All', 'Residential', 'Commercial', 'Hospitality', 'Industrial'];
+const categories = ['All', 'Telecom', 'Mining'];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
