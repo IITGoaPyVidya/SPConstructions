@@ -131,8 +131,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            15+ years of excellence in residential, commercial, and hospitality construction across Goa. 
-            250+ projects delivered with precision and pride.
+            15+ years of excellence in residential, commercial, and hospitality construction across India. 
+            50+ projects delivered with precision and pride.
           </motion.p>
 
           {/* Stats row */}
@@ -142,7 +142,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            {[['250+', 'Projects'], ['15+', 'Years'], ['52', 'Experts'], ['98%', 'Satisfaction']].map(([num, label]) => (
+            {[['50+', 'Projects'], ['15+', 'Years'], ['52', 'Experts'], ['98%', 'Satisfaction']].map(([num, label]) => (
               <div key={label} className="text-center">
                 <div className="text-2xl font-bold text-orange-400 font-heading">{num}</div>
                 <div className="text-concrete/50 text-xs">{label}</div>

@@ -118,7 +118,7 @@ export const testimonials = [
 ];
 
 export const stats = [
-  { value: 250, label: "Projects Completed", icon: "🏗️", suffix: "+" },
+  { value: 50, label: "Projects Completed", icon: "🏗️", suffix: "+" },
   { value: 15, label: "Years of Excellence", icon: "⭐", suffix: "+" },
   { value: 52, label: "Expert Team Members", icon: "👷", suffix: "" },
   { value: 98, label: "Client Satisfaction", icon: "🤝", suffix: "%" },
