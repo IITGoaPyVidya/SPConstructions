@@ -1,0 +1,16 @@
+{
+  "name": "SP Construction Company",
+  "short_name": "SP Constructions",
+  "description": "Building Tomorrow's Landmarks Today",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A202C",
+  "theme_color": "#FF6B35",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
