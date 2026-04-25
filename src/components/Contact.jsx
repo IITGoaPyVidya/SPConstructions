@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const schema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email'),
-  phone: z.union([z.string().min(10, 'Please enter a valid phone number'), z.literal('')]).optional(),
+  phone: z.string().optional().refine(val => !val || val.length >= 10, 'Please enter a valid phone number'),
   subject: z.string().min(3, 'Subject must be at least 3 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
