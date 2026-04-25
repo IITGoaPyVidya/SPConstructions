@@ -1,7 +1,54 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import CountUp from 'react-countup';
 import { stats } from '../utils/data';
+
+// Custom counter hook
+function useCounter(end, duration = 2500, delay = 0) {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    if (!started) return;
+    
+    const timer = setTimeout(() => {
+      const startTime = Date.now();
+      const endTime = startTime + duration;
+
+      const updateCount = () => {
+        const now = Date.now();
+        const remaining = endTime - now;
+        
+        if (remaining <= 0) {
+          setCount(end);
+        } else {
+          const progress = 1 - remaining / duration;
+          const easeOutQuad = progress * (2 - progress);
+          setCount(Math.floor(easeOutQuad * end));
+          requestAnimationFrame(updateCount);
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [started, end, duration, delay]);
+
+  return [count, () => setStarted(true)];
+}
+
+// Counter component
+function Counter({ end, duration, delay, suffix, inView }) {
+  const [count, startCounter] = useCounter(end, duration, delay);
+  
+  useEffect(() => {
+    if (inView) {
+      startCounter();
+    }
+  }, [inView, startCounter]);
+
+  return <>{count}{suffix}</>;
+}
 
 export default function Stats() {
   const ref = useRef(null);
@@ -51,13 +98,16 @@ export default function Stats() {
               
               <div className="text-4xl md:text-5xl font-black text-white font-heading">
                 {inView ? (
-                  <CountUp
+                  <Counter
                     end={stat.value}
-                    duration={2.5}
-                    delay={i * 0.2}
+                    duration={2500}
+                    delay={i * 200}
                     suffix={stat.suffix}
+                    inView={inView}
                   />
-                ) : '0'}
+                ) : (
+                  <span>0{stat.suffix}</span>
+                )}
               </div>
               
               <div className="text-concrete/60 text-sm mt-2 font-medium">{stat.label}</div>
