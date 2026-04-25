@@ -115,23 +115,35 @@ export default function Assets3D() {
             {assets.map((asset, i) => (
               <motion.div
                 key={asset.name}
-                className="bg-steel-50 dark:bg-steel-800 rounded-xl p-4 border border-steel-200 dark:border-steel-700/50 hover:border-orange-500/50 transition-all group"
+                className="bg-steel-50 dark:bg-steel-800 rounded-xl overflow-hidden border border-steel-200 dark:border-steel-700/50 hover:border-orange-500/50 transition-all group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform inline-block">
-                  {asset.icon}
+                <div className="relative h-32 overflow-hidden">
+                  <motion.img
+                    src={asset.image}
+                    alt={asset.name}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1, rotate: 2 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-steel-900/60 to-transparent"></div>
                 </div>
-                <h3 className="font-bold text-steel-800 dark:text-white text-sm">{asset.name}</h3>
-                <p className="text-concrete/50 text-xs mt-0.5">{asset.type}</p>
-                <div className="flex items-center justify-between mt-3">
-                  <span className="text-orange-500 font-bold text-lg">{asset.count}</span>
-                  <span className="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-0.5 rounded-full">
-                    {asset.status}
-                  </span>
+                <div className="p-4">
+                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform inline-block">
+                    {asset.icon}
+                  </div>
+                  <h3 className="font-bold text-steel-800 dark:text-white text-sm">{asset.name}</h3>
+                  <p className="text-concrete/50 text-xs mt-0.5">{asset.type}</p>
+                  <div className="flex items-center justify-between mt-3">
+                    <span className="text-orange-500 font-bold text-lg">{asset.count} Units</span>
+                    <span className="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-0.5 rounded-full">
+                      {asset.status}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             ))}

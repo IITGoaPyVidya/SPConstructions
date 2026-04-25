@@ -123,10 +123,10 @@ export const stats = [
 ];
 
 export const assets = [
-  { name: "JCB Excavator", type: "Earth Moving", count: 6, status: "Active", icon: "⚙️" },
-  { name: "Hyva Tipper", type: "Material Transport", count: 8, status: "Active", icon: "🚛" },
-  { name: "Poclain Machine", type: "Heavy Excavator", count: 4, status: "Active", icon: "🏗️" },
-  { name: "Trailer Trucks", type: "Heavy Transport", count: 5, status: "Active", icon: "🚚" },
-  { name: "Tipper Trucks", type: "Material Hauling", count: 10, status: "Active", icon: "🚛" },
-  { name: "Trencher Machine", type: "Cable Laying", count: 3, status: "Active", icon: "🔧" },
+  { name: "JCB Excavator", type: "Earth Moving", count: 6, status: "Active", icon: "⚙️", image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&auto=format&fit=crop" },
+  { name: "Hyva Tipper", type: "Material Transport", count: 8, status: "Active", icon: "🚛", image: "https://images.unsplash.com/photo-1625235547302-19070eb2f9ab?w=600&auto=format&fit=crop" },
+  { name: "Poclain Machine", type: "Heavy Excavator", count: 4, status: "Active", icon: "🏗️", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop" },
+  { name: "Trailer Trucks", type: "Heavy Transport", count: 5, status: "Active", icon: "🚚", image: "https://images.unsplash.com/photo-1533377839809-8e7c60f1f5a0?w=600&auto=format&fit=crop" },
+  { name: "Tipper Trucks", type: "Material Hauling", count: 10, status: "Active", icon: "🚛", image: "https://images.unsplash.com/photo-1625235547302-19070eb2f9ab?w=600&auto=format&fit=crop" },
+  { name: "Trencher Machine", type: "Cable Laying", count: 3, status: "Active", icon: "🔧", image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&auto=format&fit=crop" },
 ];
