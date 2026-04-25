@@ -19,12 +19,12 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-orange-500 text-sm font-semibold uppercase tracking-widest">Our Work</span>
+          <span className="text-orange-500 text-sm font-semibold uppercase tracking-widest">Our Equipment</span>
           <h2 className="text-4xl md:text-5xl font-black text-steel-800 dark:text-white font-heading mt-2">
-            Construction <span className="text-gradient">Gallery</span>
+            Heavy Vehicles <span className="text-gradient">Gallery</span>
           </h2>
           <p className="text-steel-600 dark:text-concrete/60 mt-4 max-w-2xl mx-auto">
-            A visual journey through our most remarkable construction achievements.
+            Our fleet of heavy equipment - JCB, Hyva, Poclain, Trucks, and Tippers ready for rent.
           </p>
         </motion.div>
 
@@ -40,13 +40,15 @@ export default function Gallery() {
               whileHover={{ scale: 1.02 }}
               onClick={() => { setIndex(i); setOpen(true); }}
             >
-              <img
+              <motion.img
                 src={img}
-                alt={`Gallery ${i + 1}`}
-                className="w-full rounded-xl transition-transform duration-500 group-hover:scale-110"
+                alt={`Equipment ${i + 1}`}
+                className="w-full rounded-xl"
                 loading="lazy"
+                whileHover={{ scale: 1.15, rotate: 2 }}
+                transition={{ duration: 0.3 }}
               />
-              <div className="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/40 transition-all duration-300 rounded-xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-steel-900/0 group-hover:bg-steel-900/30 transition-all duration-300 rounded-xl flex items-center justify-center">
                 <motion.div
                   className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ scale: 1.2 }}
